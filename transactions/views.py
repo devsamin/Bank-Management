@@ -82,6 +82,9 @@ class WithdrawMoneyView(TransactionCreateMixin):
     
     def form_valid(self, form):
         bank = Bank.objects.get(name="Jomuna bank")
+        if not bank:  # bank object na thakle
+            messages.error(self.request, "Bank does not exist.")
+            return redirect('home')
         if not bank.is_bankrupt:
             amount = form.cleaned_data.get('amount')
             account = self.request.user.account
