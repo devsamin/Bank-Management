@@ -16,3 +16,4 @@ setuptools
 sqlparse
 tzdata
 virtualenv
+dj_database_url
