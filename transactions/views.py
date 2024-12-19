@@ -216,5 +216,9 @@ class TransferMoneyviews(TransactionCreateMixin):
         sender_account.save(update_fields = ['balance'])       
 
         messages.success(self.request, f"""{
-                         amount} has been sent to Account:  {account_no}""")
+                         amount}$ has been sent to Account:  {account_no}""")
+        send_transaction_email(self.request.user, amount, "TransferMoney Message", "transactions/transfermoney_email.html")                
         return super().form_valid(form)
+
+
+

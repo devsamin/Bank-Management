@@ -3,6 +3,7 @@ from .constants import ACCOUNT_TYPE, GENDER_TYPE
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from accounts.models import UserBankAccount, UserAddress
+from django.contrib.auth.forms import  PasswordChangeForm
 
 
 class UserRegisterForms(UserCreationForm):
@@ -124,3 +125,14 @@ class UserUpdateForm(forms.ModelForm):
             user_address.save()
 
         return user
+
+
+class CustomChangePassForm(PasswordChangeForm):
+    def __init__(self, *args, **kwargs):
+        super(PasswordChangeForm, self).__init__(*args, **kwargs)
+        for fildename in self.fields:
+            self.fields[fildename].help_text = None
+            self.fields[fildename].widget.attrs.update({'class' : 'form-control'})
+    class Meta:
+        model = User
+        fields = ['old_password', 'new_password1', 'new_password2']
