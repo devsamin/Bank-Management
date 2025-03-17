@@ -30,7 +30,7 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://bank-management-5smz.vercel.app/','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://bank-management-1-bjom.onrender.com','https://*.127.0.0.1']
 
 # Application definition
 
