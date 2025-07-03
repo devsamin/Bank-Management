@@ -10,7 +10,6 @@ packaging
 pillow
 pipenv
 platformdirs
-psycopg2-binary
 PythonTurtle
 setuptools
 sqlparse
