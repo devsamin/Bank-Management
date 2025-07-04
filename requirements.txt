@@ -15,10 +15,4 @@ packaging
 pillow
 pipenv
 platformdirs
-psycopg2
-PythonTurtle
-setuptools
-sqlparse
-typing_extensions
-tzdata
-virtualenv
+psycopg2-binary
