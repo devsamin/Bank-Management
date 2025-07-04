@@ -32,12 +32,12 @@ DEBUG = True
 # ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['https://bank-management-r8c6.onrender.com','https://*.127.0.0.1']
 
-# ALLOWED_HOSTS = ["bank-management.vercel.app"]
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "bank-management.vercel.app",
-]
+ALLOWED_HOSTS = [".vercel.app"]
+# ALLOWED_HOSTS = [
+#     "127.0.0.1",
+#     "localhost",
+#     "bank-management.vercel.app",
+# ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://bank-management.vercel.app"

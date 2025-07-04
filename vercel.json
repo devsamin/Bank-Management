@@ -1,18 +1,30 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "mamar_bank/wsgi.py",
+      "src": "manage.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.11"
+        "maxLambdaSize": "50mb"
       }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "mamar_bank/wsgi.py"
+      "dest": "manage.py"
     }
-  ]
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "mamar_bank.settings",
+    "PYTHONUNBUFFERED": "1"
+  }
 }
