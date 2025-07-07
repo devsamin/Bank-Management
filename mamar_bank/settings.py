@@ -32,7 +32,7 @@ DEBUG = True
 # ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['https://bank-management-r8c6.onrender.com','https://*.127.0.0.1']
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".vercel.app","127.0.0.1",]
 # ALLOWED_HOSTS = [
 #     "127.0.0.1",
 #     "localhost",
@@ -93,23 +93,24 @@ WSGI_APPLICATION = 'mamar_bank.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = { /// For Sqlit
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
     }
 }
 
-# \DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': env("DB_NAME"),
-#         'USER': env("DB_USER"),
-#         'PASSWORD': env("DB_PASSWORD"),
-#         'HOST': env("DB_HOST"),
-#         'PORT': env("DB_PORT"),
-#     }
-# }
 
 # DATABASES = {
 #     'default': dj_database_url.config(
