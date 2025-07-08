@@ -40,7 +40,7 @@ ALLOWED_HOSTS = [".vercel.app","127.0.0.1",]
 # ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://bank-management.vercel.app"
+    "https://mamar-bank-sooty.vercel.app"
 ]
 # Application definition
 
@@ -164,8 +164,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+import os
+from pathlib import Path
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
