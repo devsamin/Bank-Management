@@ -100,16 +100,18 @@ WSGI_APPLICATION = 'mamar_bank.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env("DB_NAME"),
+#         'USER': env("DB_USER"),
+#         'PASSWORD': env("DB_PASSWORD"),
+#         'HOST': env("DB_HOST"),
+#         'PORT': env("DB_PORT"),
+#     }
+# }
+
+
 
 
 # DATABASES = {
@@ -119,6 +121,14 @@ DATABASES = {
 #         ssl_require=True
 #     )
 # }
+
+DATABASES = {
+    'default': dj_database_url.parse(
+        env("NEON_DATABSE_URL"),
+        conn_max_age=600,
+    )
+}
+
 
 
 # Password validation
