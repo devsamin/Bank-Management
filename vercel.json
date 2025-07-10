@@ -11,7 +11,7 @@
     }
   ],
   "routes": [
-    {
+     {
       "src": "/static/(.*)",
       "dest": "/staticfiles/$1"
     },
@@ -19,5 +19,6 @@
       "src": "/(.*)",
       "dest": "mamar_bank/wsgi.py"
     }
-  ]
+  ],
+  "buildCommand": "python manage.py collectstatic --noinput"
 }
