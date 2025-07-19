@@ -124,7 +124,7 @@ WSGI_APPLICATION = 'mamar_bank.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(
-        env("NEON_DATABSE_URL"),
+        env("NEON_DATABASE_URL"),
         conn_max_age=600,
     )
 }
