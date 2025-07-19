@@ -20,6 +20,5 @@
       "src": "/(.*)",
       "dest": "mamar_bank/wsgi.py"
     }
-  ],
-  "buildCommand": "./build_files.sh"
+  ]
 }
