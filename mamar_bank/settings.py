@@ -40,7 +40,7 @@ ALLOWED_HOSTS = [".vercel.app","127.0.0.1"]
 # ]
 
 CSRF_TRUSTED_ORIGINS = [
-    # "https://mamar-bank-sooty.vercel.app"
+    "https://bank-management-ten.vercel.app"
 ]
 # Application definition
 
