@@ -32,7 +32,7 @@ DEBUG = False
 # ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['https://bank-management-r8c6.onrender.com','https://*.127.0.0.1']
 
-ALLOWED_HOSTS = [".vercel.app","127.0.0.1", ".now.sh"]
+ALLOWED_HOSTS = [".vercel.app","127.0.0.1"]
 # ALLOWED_HOSTS = [
 #     "127.0.0.1",
 #     "localhost",
@@ -45,7 +45,6 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "whitenoise.runserver_nostatic",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -170,8 +169,8 @@ from pathlib import Path
 
 # STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
-
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATIC_URL = '/static/'
 # # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
