@@ -27,12 +27,12 @@ SECRET_KEY = env("SECRET_KEY")
 # SECRET_KEY = 'django-insecure-ysvf#-3&t^5-rg34ip%)&zw5okhkctsf0(@y@_g1p_v3pk0j2*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 # CSRF_TRUSTED_ORIGINS = ['https://bank-management-r8c6.onrender.com','https://*.127.0.0.1']
 
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
+# ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
 # ALLOWED_HOSTS = [
 #     "127.0.0.1",
 #     "localhost",
@@ -172,8 +172,8 @@ from pathlib import Path
 # STATIC_URL = '/static/'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # MEDIA_URL = '/media/'
