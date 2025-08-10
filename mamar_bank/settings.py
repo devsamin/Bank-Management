@@ -39,9 +39,9 @@ CSRF_TRUSTED_ORIGINS = ['https://trust-bank.onrender.com','https://*.127.0.0.1']
 #     "bank-management.vercel.app",
 # ]
 
-CSRF_TRUSTED_ORIGINS = [
-    # "https://bank-management-ten.vercel.app"
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     # "https://bank-management-ten.vercel.app"
+# ]
 # Application definition
 
 INSTALLED_APPS = [
